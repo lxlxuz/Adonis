@@ -408,9 +408,9 @@ task.wait(0.5)
 
 if bypassSuccess then
     --print("|--FRAMEWORK LOADED--|")
-    --print("Anti-cheat bypass successful")
+    print("[INFO] - bypass successful")
 else
-    --print("Anti-cheat bypass failed")
+    print("[ERR] - bypass failed")
 end
 
 return {
