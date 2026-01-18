@@ -17,14 +17,14 @@ local CONFIG = {
     BLOCK_REMOTES = true,
 }
 
-print("Loading bypass framework...")
+--print("Loading bypass framework...")
 
 -- Layer 1: External bypass (DISABLED)
 -- local bypassLoaded = false
 -- pcall(function()
 --     loadstring(game:HttpGet("https://raw.githubusercontent.com/lxlxuz/Adonis/refs/heads/main/ExternalBypass.luau"))()
 --     bypassLoaded = true
---     print("External bypass loaded")
+--     --print("External bypass loaded")
 -- end)
 local bypassLoaded = false
 
@@ -71,7 +71,7 @@ pcall(function()
     
     metaProtected = true
     setreadonly(mt, true)
-    print("Metatable protection enabled")
+    --print("Metatable protection enabled")
 end)
 
 -- Layer 4: Remote interception and kick protection
@@ -184,7 +184,7 @@ if CONFIG.BLOCK_REMOTES then
                 end)
                 
                 setreadonly(mt, true)
-                print("Remote interception enabled")
+                --print("Remote interception enabled")
             end
         end)
     end
@@ -301,7 +301,7 @@ if not getgenv().getgcWrapped then
             return realGetGC(...)
         end
         
-        print("GetGC wrapper enabled")
+        --print("GetGC wrapper enabled")
     end)
 end
 
@@ -348,7 +348,7 @@ if not getgenv().callStackSpoofed then
             return calling
         end
         
-        print("Call stack spoofing enabled")
+        --print("Call stack spoofing enabled")
     end)
 end
 
@@ -389,7 +389,7 @@ if not getgenv().detectedHookAttempted then
                     end)
                     
                     if hookSuccess then
-                        print("Detection hook installed successfully")
+                        --print("Detection hook installed successfully")
                     end
                     break
                 end
@@ -407,10 +407,10 @@ local bypassSuccess = bypassLoaded or metaProtected
 task.wait(0.5)
 
 if bypassSuccess then
-    print("|--FRAMEWORK LOADED--|")
-    print("Anti-cheat bypass successful")
+    --print("|--FRAMEWORK LOADED--|")
+    --print("Anti-cheat bypass successful")
 else
-    print("Anti-cheat bypass failed")
+    --print("Anti-cheat bypass failed")
 end
 
 return {
