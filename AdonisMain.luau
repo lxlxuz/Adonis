@@ -410,7 +410,7 @@ if bypassSuccess then
     --print("|--FRAMEWORK LOADED--|")
     print("[INFO] - bypass successful")
 else
-    print("[ERR] - bypass failed")
+    print("[ERROR] - bypass failed")
 end
 
 return {
